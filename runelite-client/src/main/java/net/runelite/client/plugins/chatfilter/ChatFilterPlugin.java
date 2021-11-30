@@ -325,6 +325,7 @@ public class ChatFilterPlugin extends Plugin
 	 */
 	String censorMessage(final String username, final String message)
 	{
+		// CS427 Issue link: https://github.com/runelite/runelite/issues/13885
 		AbstractMap.SimpleEntry<String, Color> messagePair = ColorUtil.unwrapColorTag(message);
 		String uncoloredMessage = messagePair.getKey();
 		Color messageColor = messagePair.getValue();
@@ -368,6 +369,7 @@ public class ChatFilterPlugin extends Plugin
 
 			strippedMessage = sb.toString();
 		}
+		// CS427 Issue link: https://github.com/runelite/runelite/issues/13885
 		if (messagePair.getValue() != null)
 		{
 			strippedMessage = ColorUtil.wrapWithColorTag(strippedMessage, messageColor);
