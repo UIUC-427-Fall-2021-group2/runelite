@@ -137,6 +137,7 @@ public class ChatFilterPluginTest
 		assertEquals("w***s up", chatFilterPlugin.censorMessage("Blue", "whats up"));
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13885
 	@Test
 	public void testDontCensorColorTag()
 	{
@@ -157,6 +158,7 @@ public class ChatFilterPluginTest
 		assertNull(chatFilterPlugin.censorMessage("Blue", "55X2 Dicing | Trusted Ranks | Huge Pay Outs!"));
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13885
 	@Test
 	public void testCensorRegexColoredFront()
 	{
@@ -168,6 +170,7 @@ public class ChatFilterPluginTest
 		assertNull(chatFilterPlugin.censorMessage("Blue", msg));
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13885
 	@Test
 	public void testCensorRegexColoredBack()
 	{
