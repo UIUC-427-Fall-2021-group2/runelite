@@ -84,6 +84,7 @@ public class ColorUtil
 	 */
 	public static AbstractMap.SimpleEntry<String, Color> unwrapColorTag(final String str)
 	{
+		// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 		Matcher m = COLORED_STR_PATTERN.matcher(str);
 		AbstractMap.SimpleEntry<String, Color> outPair;
 		if (m.matches())

@@ -220,6 +220,7 @@ public class ChatMessageManager
 			case "privChatUsername":
 				wrap = true;
 				break;
+			// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 			case "userNameTagReturn":
 				int[] intStack = client.getIntStack();
 				int intStackSize = client.getIntStackSize();
@@ -269,6 +270,7 @@ public class ChatMessageManager
 	@Subscribe
 	public void onScriptPreFired(ScriptPreFired ev)
 	{
+		// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 		if (ev.getScriptId() == ScriptID.CHATBOX_PARENT)
 		{
 			for (MessageNode messageNode : client.getMessages())
@@ -293,6 +295,7 @@ public class ChatMessageManager
 	@Subscribe
 	public void onScriptPostFired(ScriptPostFired ev)
 	{
+		// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 		if (ev.getScriptId() == ScriptID.CHATBOX_PARENT)
 		{
 			for (MessageNode messageNode : client.getMessages())
