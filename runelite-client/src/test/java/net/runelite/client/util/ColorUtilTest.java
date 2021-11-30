@@ -79,6 +79,7 @@ public class ColorUtilTest
 		});
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	@Test
 	public void unwrapColorTag()
 	{
@@ -88,6 +89,7 @@ public class ColorUtilTest
 		assertEquals(expected, observed);
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	@Test
 	public void unwrapColorTagNoColor()
 	{
@@ -97,6 +99,7 @@ public class ColorUtilTest
 		assertEquals(expected, observed);
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	@Test
 	public void unwrapColorTagNoMessage()
 	{

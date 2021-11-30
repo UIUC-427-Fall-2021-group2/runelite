@@ -193,6 +193,7 @@ public class ChatMessageManagerTest
 		verify(messageNode).setValue("<col=000000>Total points: <col=ff0000>42<col=000000>, Personal points: <col=ff0000>43<col=000000> (<col=ff0000>44<col=000000>%)");
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	private void setupColorRemoveReturn(String uncoloredName, String coloredName)
 	{
 		IterableHashTable<MessageNode> messageTable = mock(IterableHashTable.class);
@@ -209,6 +210,7 @@ public class ChatMessageManagerTest
 		chatMessageManager.onScriptPreFired(preEvent);
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	private MessageNode mockMessageNode(int id, String name)
 	{
 		MessageNode node = mock(MessageNode.class);
@@ -223,6 +225,7 @@ public class ChatMessageManagerTest
 		return node;
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	private ScriptCallbackEvent createCallbackEvent(final String chatUserName, final int messageID)
 	{
 		ScriptCallbackEvent event = new ScriptCallbackEvent();
@@ -237,6 +240,7 @@ public class ChatMessageManagerTest
 		return event;
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	@Test
 	public void testScriptPreFire()
 	{
@@ -248,6 +252,7 @@ public class ChatMessageManagerTest
 		assertEquals(colorRemovedName, client.getMessages().get(1).getName());
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	@Test
 	public void testScriptPostFire()
 	{
@@ -260,6 +265,7 @@ public class ChatMessageManagerTest
 		assertEquals(coloredName, client.getMessages().get(1).getName());
 	}
 
+	// CS427 Issue link: https://github.com/runelite/runelite/issues/13537
 	@Test
 	public void testUserNameColorReturn()
 	{
